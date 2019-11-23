@@ -7,7 +7,10 @@ SUBNET=$(ip -o -f inet addr show | awk '/scope global/{sub(/[^.]+\//,"0/",$4);pr
 value=$(( 0xffffffff ^ ((1 << (32 - $SUBNET)) - 1) ))
 NETMASK="$(( (value >> 24) & 0xff )).$(( (value >> 16) & 0xff )).$(( (value >> 8) & 0xff )).$(( value & 0xff ))"
 
-wget --no-check-certificate -qO InstallNET.sh 'https://github.com/thankeyes/dd/master/InstallNET.sh' && chmod a+x InstallNET.sh && wget -N --no-check-certificate https://github.com/veip007/Network-Reinstall-System-Modify/raw/master/Network-Reinstall-System-Modify.sh && chmod a+x Network-Reinstall-System-Modify.sh
+wget --no-check-certificate -qO InstallNET.sh 'https://github.com/thankeyes/dd/master/InstallNET.sh' && chmod a+x InstallNET.sh && \
+wget -N --no-check-certificate https://github.com/thankeyes/Network-Reinstall-System-Modify/raw/master/Network-Reinstall-System-Modify.sh &&  \
+chmod a+x Network-Reinstall-System-Modify.sh
+
 
 clear
 echo "                                                           "
