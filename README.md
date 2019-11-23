@@ -1,3 +1,22 @@
+### GD直连获取方法
+1.下载脚本
+```
+wget -N --no-check-certificate https://raw.githubusercontent.com/thankeyes/dd/master/gdlink && chmod +x gdlink 
+
+```
+2.使用方法
+```
+#Work with share link/使用分享链接方式
+gdlink 'https://drive.google.com/open?id=0B8SvBXZ3I5QMcUduTMJEanRkMzQ'
+
+#Work with file id/使用文件ID方式
+gdlink '0B8SvBXZ3I5QMcUduTMJEanRkMzQ'
+ 
+#download with share link/使用分享链接方式直接使用wget下载链接
+##可将其中./download改成自己需要的文件名或文件绝对路径
+gdlink 'https://drive.google.com/open?id=0B8SvBXZ3I5QMcUduTMJEanRkMzQ' |xargs -n1 wget -c -O ./download
+```
+
 # 萌咖大佬的一键DD脚本
 
 ## 注意:
@@ -166,23 +185,6 @@ bash InstallNET.sh -c 6.9 -v 64 -a --mirror 'http://mirror.centos.org/centos'
 连接提示中的IP地址:端口进行连接.(端口一般为```1```或者```5901```)
 
 
-### GD直连获取方法
-1.下载脚本
-```
-wget -N --no-check-certificate https://raw.githubusercontent.com/veip007/DDWIN/master/gdlink.sh && chmod +x gdlink.sh && ./gdlink.sh
-```
-2.使用方法
-```
-#Work with share link/使用分享链接方式
-gdlink 'https://drive.google.com/open?id=0B8SvBXZ3I5QMcUduTMJEanRkMzQ'
-
-#Work with file id/使用文件ID方式
-gdlink '0B8SvBXZ3I5QMcUduTMJEanRkMzQ'
- 
-#download with share link/使用分享链接方式直接使用wget下载链接
-##可将其中./download改成自己需要的文件名或文件绝对路径
-gdlink 'https://drive.google.com/open?id=0B8SvBXZ3I5QMcUduTMJEanRkMzQ' |xargs -n1 wget -c -O ./download
-```
 
 
 
